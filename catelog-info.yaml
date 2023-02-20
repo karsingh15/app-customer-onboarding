@@ -17,3 +17,11 @@ spec:
   type: service
   lifecycle: experimental
   owner: onboarding-team
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: onboarding-team
+spec:
+  type: team
+  children: []
