@@ -9,4 +9,4 @@ spec:
   system: app-customer-onboarding
   owner: onboarding-team
   definition: 
-    $text: https://api.apis.guru/v2/openapi.yaml
+    $text: api-specs.yaml
