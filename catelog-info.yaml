@@ -6,9 +6,9 @@ metadata:
   description: |
     Customer Onboarding Repository
   links:
-#    - url:
-#      title: Github Repo
-#      icon: Github
+   - url: https://github.com/karsingh15/app-customer-onboarding
+     title: Github Repo
+     icon: Github
     - url: https://sonarcloud.io/projects
       title: Sonar Report
   annotations:
