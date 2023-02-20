@@ -8,4 +8,5 @@ spec:
   lifecycle: production
   system: app-customer-onboarding
   owner: onboarding-team
-  definition: https://github.com/karsingh15/app-customer-onboarding/edit/master/app-customer-registration/api-specs.yaml
+  definition: 
+    https://github.com/karsingh15/app-customer-onboarding/edit/master/app-customer-registration/api-specs.yaml
