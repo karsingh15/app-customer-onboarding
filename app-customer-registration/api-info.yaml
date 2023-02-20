@@ -8,4 +8,5 @@ spec:
   lifecycle: production
   system: app-customer-onboarding
   owner: onboarding-team
-  definition: https://api.apis.guru/v2/openapi.yaml
+  definition: 
+    $openapi: https://api.apis.guru/v2/openapi.yaml
