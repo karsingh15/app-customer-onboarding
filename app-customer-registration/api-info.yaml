@@ -8,4 +8,5 @@ spec:
   lifecycle: production
   system: app-customer-onboarding
   owner: onboarding-team
-  definition: dir/api-specs.yaml
+  definition: 
+    $openapi: dir/api-specs.yaml
