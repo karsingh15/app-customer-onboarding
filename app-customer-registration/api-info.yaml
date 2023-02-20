@@ -9,4 +9,4 @@ spec:
   system: app-customer-onboarding
   owner: onboarding-team
   definition: 
-    $text: https://github.com/karsingh15/app-customer-onboarding/blob/master/app-customer-master/catalog-info.yaml
+    $text: https://api.apis.guru/v2/openapi.yaml
