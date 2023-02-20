@@ -5,7 +5,7 @@ metadata:
   # This is an extra long description with Markdown
   description: |
     These are the customer master creation services that hold the actual business logic. These services are identified based on the business capabilities through domain driven design.
- links:
+  links:
    - url: https://github.com/karsingh15/app-customer-onboarding/tree/master/app-customer-master
      title: Github Repo
      icon: github
