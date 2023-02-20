@@ -1,0 +1,20 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: app-customer-registration
+  # This is an extra long description with Markdown
+  description: |
+    These are the customer registration services that hold the actual business logic. These services are identified based on the business capabilities through domain driven design.
+  links:
+#    - url: https://pscode.lioncloud.net/karsingh20/fabric-e2e-ms/-/tree/main/src/main/resources/templates/domainService
+#      title: PSCode Repo
+  annotations:
+    sonarqube.org/project-key: domain-service
+#    backstage.io/techdocs-ref: url:https://pscode.lioncloud.net/karsingh20/fabric-e2e-ms/-/tree/main/src/main/resources/templates/domainService
+spec:
+  type: service
+  lifecycle: experimental
+  system: app-customer-onboarding
+  owner: onboarding-team
+  providesApis:
+    - api-customer-registration
