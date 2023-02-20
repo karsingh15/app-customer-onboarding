@@ -1,0 +1,547 @@
+openapi: 3.0.1
+info:
+  title: Registration Api
+  version: 0.0.1
+  description: Registration Microservices
+servers:
+  - url: http://localhost:9090
+    description: Generated server url
+tags:
+  - name: ACCOUNT-SERVICE
+    description: Account APIs
+  - name: USER-SERVICE
+    description: User APIs
+  - name: CUSTOMER-SERVICE
+    description: Customer APIs
+  - name: BRANCH-SERVICE
+    description: Branch APIs
+paths:
+  /api/customer/create-profile/{id}:
+    put:
+      tags:
+        - CUSTOMER-SERVICE
+      summary: create a customer profile
+      operationId: registerCustomer
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+            format: int64
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Customer'
+        required: true
+      responses:
+        '200':
+          description: Customer Profile Created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Customer'
+  /api/branch/{id}:
+    get:
+      tags:
+        - BRANCH-SERVICE
+      summary: Get a branch by its id
+      operationId: getBranchById
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+            format: int32
+      responses:
+        '200':
+          description: Found the branch
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Branch'
+        '400':
+          description: Invalid id supplied
+        '404':
+          description: Branch not found
+    put:
+      tags:
+        - BRANCH-SERVICE
+      summary: Update a Branch
+      operationId: updateBranch
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+            format: int32
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Branch'
+        required: true
+      responses:
+        '200':
+          description: Branch Updated
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Branch'
+  /user/reset-user:
+    post:
+      tags:
+        - USER-SERVICE
+      summary: Reset a user
+      operationId: reset
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ResetUserDto'
+        required: true
+      responses:
+        '201':
+          description: User Reset
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+  /user/register-user:
+    post:
+      tags:
+        - USER-SERVICE
+      summary: create a user
+      operationId: registerUser
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UserDto'
+        required: true
+      responses:
+        '201':
+          description: User Created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+  /user/login:
+    post:
+      tags:
+        - USER-SERVICE
+      summary: Login a user
+      operationId: login
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/LoginUserDto'
+        required: true
+      responses:
+        '201':
+          description: User Login in
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+  /user/change-password:
+    post:
+      tags:
+        - USER-SERVICE
+      summary: Change User Password
+      operationId: changePassword
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ChangePasswordDto'
+        required: true
+      responses:
+        '200':
+          description: Password Changed
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+  /api/branch:
+    get:
+      tags:
+        - BRANCH-SERVICE
+      summary: Get all branches
+      operationId: getAllBranches
+      responses:
+        '200':
+          description: Found the Branches
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Branch'
+    post:
+      tags:
+        - BRANCH-SERVICE
+      summary: create a branch
+      operationId: createBranch
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Branch'
+        required: true
+      responses:
+        '201':
+          description: Branch Created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Branch'
+  /user/confirm-user:
+    get:
+      tags:
+        - USER-SERVICE
+      summary: Confirm User
+      operationId: confirm
+      parameters:
+        - name: token
+          in: query
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: User Confirmed
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+  /api/users:
+    get:
+      tags:
+        - USER-SERVICE
+      summary: Get all Users
+      operationId: getAllUsers
+      responses:
+        '200':
+          description: Found the Users
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+  /api/customer:
+    get:
+      tags:
+        - CUSTOMER-SERVICE
+      summary: Get all customers
+      operationId: getAllCustomers
+      responses:
+        '200':
+          description: Found the customers
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Customer'
+  /api/customer/{id}:
+    get:
+      tags:
+        - CUSTOMER-SERVICE
+      summary: Get a customer by its customerId
+      operationId: getCustomerById
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+            format: int64
+      responses:
+        '200':
+          description: Found the customer
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Customer'
+        '400':
+          description: Invalid id supplied
+        '404':
+          description: Customer not found
+  /api/branch/byName/{name}:
+    get:
+      tags:
+        - BRANCH-SERVICE
+      summary: Get a branch by its name
+      operationId: getBranchByName
+      parameters:
+        - name: name
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Found the branch
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Branch'
+        '400':
+          description: Invalid name supplied
+        '404':
+          description: Branch not found
+  /api/account:
+    get:
+      tags:
+        - ACCOUNT-SERVICE
+      summary: Get all Accounts
+      operationId: getAllAccounts
+      responses:
+        '200':
+          description: Found the Accounts
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Account'
+  /api/account/{id}:
+    get:
+      tags:
+        - ACCOUNT-SERVICE
+      summary: Get a account by its id
+      operationId: getAccountById
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+            format: int32
+      responses:
+        '200':
+          description: Found the account
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Account'
+        '400':
+          description: Invalid id supplied
+        '404':
+          description: Account not found
+  /api/account/bytype:
+    get:
+      tags:
+        - ACCOUNT-SERVICE
+      summary: Get a account by its type i.e,accountNumber or customerId
+      operationId: getAccountByAccountNumber
+      parameters:
+        - name: type
+          in: query
+          required: true
+          schema:
+            type: string
+        - name: id
+          in: query
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Found the account
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Account'
+        '400':
+          description: Invalid type supplied
+        '404':
+          description: Account not found
+components:
+  schemas:
+    Account:
+      type: object
+      properties:
+        accountId:
+          type: integer
+          format: int32
+          example: 34
+        accountNumber:
+          type: integer
+          format: int64
+          example: 49835795879574
+        accountType:
+          type: string
+          example: SAVINGS
+        balance:
+          type: number
+          format: double
+          example: 0
+    Branch:
+      required:
+        - zipCode
+      type: object
+      properties:
+        branchId:
+          type: integer
+          format: int32
+          example: 12
+        branchName:
+          type: string
+          example: whitefield
+        branchCode:
+          maximum: 99999
+          type: integer
+          format: int32
+          example: 53677
+        ifscCode:
+          maxLength: 11
+          minLength: 11
+          type: string
+          example: HSBC00001TG
+        branchAddressLine1:
+          type: string
+          example: hill street
+        branchAddressLine2:
+          type: string
+          example: park avenue road
+        city:
+          type: string
+          example: London
+        state:
+          type: string
+          example: United Kingdom
+        zipCode:
+          type: integer
+          format: int32
+          example: 45436
+    Customer:
+      required:
+        - email
+      type: object
+      properties:
+        customerId:
+          type: integer
+          format: int64
+          example: 12435
+        firstName:
+          type: string
+          example: jhon
+        lastName:
+          type: string
+          example: cena
+        email:
+          pattern: ^[a-zA-Z0-9_!#$%&'*+/=?`{|}~^.-]+@[a-zA-Z0-9.-]+$
+          type: string
+          example: jhon.cena@xyz.com
+        ssn:
+          type: integer
+          format: int64
+          example: 108048320498
+        branch:
+          $ref: '#/components/schemas/Branch'
+        mobileNumber:
+          pattern: (^$|[0-9]{10})
+          type: string
+          example: '9093649744'
+        kycIndicator:
+          type: boolean
+          example: true
+        addressLine1:
+          type: string
+          example: park ridge
+        addressLine2:
+          type: string
+          example: central park
+        city:
+          type: string
+          example: London
+        state:
+          type: string
+          example: United Kingdom
+        zipCode:
+          type: integer
+          format: int32
+          example: 45435
+        accounts:
+          type: array
+          items:
+            $ref: '#/components/schemas/Account'
+    ResetUserDto:
+      type: object
+      properties:
+        username:
+          type: string
+        password:
+          type: string
+        email:
+          type: string
+    User:
+      required:
+        - email
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+          example: 4
+        username:
+          type: string
+          example: jhon
+        password:
+          type: string
+          example: cena
+        email:
+          pattern: ^[a-zA-Z0-9_!#$%&'*+/=?`{|}~^.-]+@[a-zA-Z0-9.-]+$
+          type: string
+          example: jhon@xyz.com
+        role:
+          type: string
+          example: ROLE_USER
+        enabled:
+          type: boolean
+          example: false
+        confirmationToken:
+          type: string
+          example: 87dsfkjjlkjdfo980sdka@#$^jkhkje
+        newPassword:
+          type: string
+          example: myNewPass
+        tempPassword:
+          type: boolean
+    UserDto:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+        username:
+          type: string
+        password:
+          type: string
+        email:
+          type: string
+        role:
+          type: string
+        enabled:
+          type: boolean
+        confirmationToken:
+          type: string
+        newPassword:
+          type: string
+        tempPassword:
+          type: boolean
+    LoginUserDto:
+      type: object
+      properties:
+        username:
+          type: string
+        password:
+          type: string
+    ChangePasswordDto:
+      type: object
+      properties:
+        username:
+          type: string
+        password:
+          type: string
+        newPassword:
+          type: string
