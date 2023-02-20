@@ -9,4 +9,4 @@ spec:
   system: app-customer-onboarding
   owner: onboarding-team
   definition: 
-    $text: dir/api-specs.yaml
+    $text: api-specs.yaml
