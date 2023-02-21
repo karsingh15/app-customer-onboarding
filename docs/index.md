@@ -1,4 +1,4 @@
-## Customer Onboarding Guide
+## Customer Onboarding
 Welcome to our bank! We are thrilled to have you as a new customer and we want to make sure that your onboarding process is smooth and hassle-free. In this guide, we will provide you with all the information you need to know to get started with our bank.
 
 ## Account Opening
