@@ -4,7 +4,7 @@ edit_uri: edit/master/docs
 
 nav:
   # relative reference to your Markdown file and an optional title
-  - Onboarding: onboarding.md
+  - Onboarding: index.md
 
 plugins:
   - techdocs-core
