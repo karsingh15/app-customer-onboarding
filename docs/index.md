@@ -27,11 +27,11 @@ To comply with federal regulations and prevent fraud, we are required to verify 
 ## Deposit Funds
 After your account is opened and your identity is verified, you can deposit funds into your account. You can do this by transferring funds from another bank, depositing a check, or making a cash deposit at one of our branches.
 
-| Deposit Options |  Fees  |  	Processing Time |
+| Deposit Options |  Fees  |  Processing Time  |
 |:----------------|:------:|------------------:|
-| Bank Transfer   | 	Free	 | 1-2 Business Days |
-| Check Deposit   | 	Free  |	1-2 Business Days|
-| Cash Deposit	   | Free	  | Immediate |
+| Bank Transfer   |  Free	 | 1-2 Business Days |
+| Check Deposit   |  Free  | 1-2 Business Days |
+| Cash Deposit	  |  Free	 |     Immediate     |
 
 ## Set Up Online Banking
 We offer online banking to all our customers, which allows you to manage your account from anywhere, at any time. To set up online banking, visit our website or download our mobile app. You will need to create a username and password and follow the prompts to link your account to your online profile.
