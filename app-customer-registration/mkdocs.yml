@@ -1,0 +1,10 @@
+site_name: 'onboarding-docs'
+repo_url: https://github.com/karsingh15/app-customer-onboarding/tree/master/app-customer-registration
+edit_uri: edit/master/docs
+
+nav:
+  # relative reference to your Markdown file and an optional title
+  - Onboarding: index.md
+
+plugins:
+  - techdocs-core

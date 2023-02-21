@@ -11,7 +11,7 @@ metadata:
      icon: github
   annotations:
     sonarqube.org/project-key: bffservice
-#    backstage.io/techdocs-ref: url:https://pscode.lioncloud.net/karsingh20/fabric-e2e-ms/-/tree/main/src/main/resources/templates/domainService
+#    backstage.io/techdocs-ref: dir:.
 spec:
   type: service
   lifecycle: experimental
