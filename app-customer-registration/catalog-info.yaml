@@ -11,7 +11,7 @@ metadata:
      icon: github
   annotations:
     github.com/project-slug: karsingh15/app-customer-onboarding/app-customer-registration
-    github.com/project-readme-path: docs/index.md
+#     github.com/project-readme-path: docs/index.md
     sonarqube.org/project-key: domain-service
     backstage.io/techdocs-ref: dir:.
 spec:
