@@ -7,9 +7,11 @@ nav:
   - Onboarding: index.md
   
 markdown_extensions:
-  - markdown_inline_mermaid
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   
 plugins:
   - techdocs-core
-  - mermaid2:
-      version: 8.6.4
