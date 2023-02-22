@@ -29,11 +29,11 @@ graph LR { 
     B --> C[Experience Api];  
     C --> D[Domain Service];  
     D --> E[Publish to Kafka];  
-    F[Consume From Kafka] --> G[Domain Service]  
-    G --> J[Fintech]  
-    J --> K[Publish To Topic]  
-    L[Consume From Topic] --> M[Domain Service]  
-    M --> N[DB Save] 
+    F[Consume From Kafka] --> G[Domain Service]; 
+    G --> J[Fintech];
+    J --> K[Publish To Topic];  
+    L[Consume From Topic] --> M[Domain Service];  
+    M --> N[DB Save]; 
 }
 ```
 
