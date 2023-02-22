@@ -1,20 +1,3 @@
-``` mermaid
-graph LR 
-    A[User] --> B[Apollo Gateway];
-    B --> C[Experience Api];  
-    C --> D[Domain Service];  
-    D --> E[Publish to Kafka];  
-    F[Consume From Kafka] --> G[Domain Service]; 
-    G --> J[Fintech];
-    J --> K[Publish To Topic];  
-    L[Consume From Topic] --> M[Domain Service];  
-    M --> N[DB Save]; 
-```
-
-
-## Customer Onboarding
-Welcome to OSB bank UK! We are thrilled to have you as a new customer and we want to make sure that your onboarding process is smooth and hassle-free. In this guide, we will provide you with all the information you need to know to get started with our bank.
-
 <!-- {% dot attack_plan.svg
     digraph MyGraph {
       a [shape=box]
@@ -36,6 +19,24 @@ Welcome to OSB bank UK! We are thrilled to have you as a new customer and we wan
       a -> i
     }
 %} -->
+
+
+``` mermaid
+graph LR 
+    A[User] --> B[Apollo Gateway];
+    B --> C[Experience Api];  
+    C --> D[Domain Service];  
+    D --> E[Publish to Kafka];  
+    F[Consume From Kafka] --> G[Domain Service]; 
+    G --> J[Fintech];
+    J --> K[Publish To Topic];  
+    L[Consume From Topic] --> M[Domain Service];  
+    M --> N[DB Save]; 
+```
+
+
+## Customer Onboarding
+Welcome to OSB bank UK! We are thrilled to have you as a new customer and we want to make sure that your onboarding process is smooth and hassle-free. In this guide, we will provide you with all the information you need to know to get started with our bank.
 
 ## Account Opening
 The first step in becoming a customer at our bank is to open an account. We offer various types of accounts, including checking, savings, and investment accounts. To open an account, you can visit our website or visit any of our branches. You will need to provide us with some personal information, such as your name, address, and Social Security number.
