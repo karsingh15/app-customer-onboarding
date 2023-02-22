@@ -10,7 +10,7 @@ metadata:
      title: Github Repo
      icon: github
   annotations:
-    github.com/project-slug: app-customer-onboarding/app-customer-registration
+    github.com/project-slug: app-customer-registration
     sonarqube.org/project-key: domain-service
     backstage.io/techdocs-ref: dir:.
 spec:
