@@ -1,4 +1,4 @@
-<!-- {% dot attack_plan.svg
+{% dot attack_plan.svg
     digraph MyGraph {
       a [shape=box]
       b [shape=polygon,sides=6]
@@ -18,7 +18,7 @@
       a -> h
       a -> i
     }
-%} -->
+%}
 
 
 ``` mermaid
