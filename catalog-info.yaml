@@ -12,7 +12,7 @@ metadata:
    - url: https://sonarcloud.io/projects
      title: Sonar Report
   annotations:
-    github.com/project-slug: karsingh15/app-customer-registration
+    github.com/project-slug: karsingh15/app-customer-onboarding
     github.com/project-readme-path: docs/index.md
     backstage.io/techdocs-ref: dir:.
 spec:
