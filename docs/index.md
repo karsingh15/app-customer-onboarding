@@ -1,12 +1,25 @@
 ## Customer Onboarding
 Welcome to OSB bank UK! We are thrilled to have you as a new customer and we want to make sure that your onboarding process is smooth and hassle-free. In this guide, we will provide you with all the information you need to know to get started with our bank.
 
-{% dot attack_plan.svg
-    digraph G {
-        rankdir=LR
-        Earth [peripheries=2]
-        Mars
-        Earth -> Mars
+{%
+  digraph MyGraph {
+      a [shape=box]
+      b [shape=polygon,sides=6]
+      c [shape=triangle]
+      d [shape=invtriangle]
+      e [shape=polygon,sides=4,skew=.5]
+      f [shape=polygon,sides=4,distortion=.5]
+      g [shape=diamond]
+      h [shape=Mdiamond]
+      i [shape=Msquare]
+      a -> b
+      a -> c
+      a -> d
+      a -> e
+      a -> f
+      a -> g
+      a -> h
+      a -> i
     }
 %}
 
