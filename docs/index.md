@@ -23,13 +23,14 @@ Welcome to OSB bank UK! We are thrilled to have you as a new customer and we wan
     }
 %}
 
-%%{init: {'theme': 'forest'}}%%
+``` mermaid
 graph LR
   A[Start] --> B{Error?};
   B -->|Yes| C[Hmm...];
   C --> D[Debug];
   D --> B;
   B ---->|No| E[Yay!];
+```
 
 ## Account Opening
 The first step in becoming a customer at our bank is to open an account. We offer various types of accounts, including checking, savings, and investment accounts. To open an account, you can visit our website or visit any of our branches. You will need to provide us with some personal information, such as your name, address, and Social Security number.
