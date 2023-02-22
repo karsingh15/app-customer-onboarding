@@ -1,7 +1,7 @@
 ## Customer Onboarding
 Welcome to OSB bank UK! We are thrilled to have you as a new customer and we want to make sure that your onboarding process is smooth and hassle-free. In this guide, we will provide you with all the information you need to know to get started with our bank.
 
-{% dot attack_plan.svg
+<!-- {% dot attack_plan.svg
     digraph MyGraph {
       a [shape=box]
       b [shape=polygon,sides=6]
@@ -21,15 +21,10 @@ Welcome to OSB bank UK! We are thrilled to have you as a new customer and we wan
       a -> h
       a -> i
     }
-%}
+%} -->
 
 ``` mermaid
-graph LR
-  A[Start] --> B{Error?};
-  B -->|Yes| C[Hmm...];
-  C --> D[Debug];
-  D --> B;
-  B ---->|No| E[Yay!];
+graph LR  A[User] --> B[Apollo Gateway];  B --> C[Experience Api];  C --> D[Domain Service];  D --> E[Publish to Kafka];  F[Consume From Kafka] --> G[Domain Service]  G --> J[Fintech]  J --> K[Publish To Topic]  L[Consume From Topic] --> M[Domain Service]  M --> N[DB Save]
 ```
 
 ## Account Opening
