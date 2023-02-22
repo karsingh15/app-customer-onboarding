@@ -13,7 +13,7 @@ metadata:
      title: Sonar Report
   annotations:
     github.com/project-slug: karsingh15/app-customer-onboarding
-    github.com/project-readme-path: docs/index.md
+#     github.com/project-readme-path: docs/index.md
     backstage.io/techdocs-ref: dir:.
 spec:
   type: service
