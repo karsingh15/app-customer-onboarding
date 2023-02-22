@@ -24,7 +24,7 @@ Welcome to OSB bank UK! We are thrilled to have you as a new customer and we wan
 %} -->
 
 ``` mermaid
-graph LR { 
+graph LR 
     A[User] --> B[Apollo Gateway];
     B --> C[Experience Api];  
     C --> D[Domain Service];  
@@ -34,7 +34,6 @@ graph LR { 
     J --> K[Publish To Topic];  
     L[Consume From Topic] --> M[Domain Service];  
     M --> N[DB Save]; 
-}
 ```
 
 ## Account Opening
