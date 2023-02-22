@@ -11,3 +11,5 @@ markdown_extensions:
   
 plugins:
   - techdocs-core
+  - mermaid2:
+      version: 8.6.4
