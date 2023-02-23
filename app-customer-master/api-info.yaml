@@ -1,0 +1,12 @@
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: api-customer-master
+  description: The REST API
+spec:
+  type: asyncapi
+  lifecycle: production
+  system: app-customer-onboarding
+  owner: onboarding-team
+  definition: 
+    $text: api-specs.yaml
