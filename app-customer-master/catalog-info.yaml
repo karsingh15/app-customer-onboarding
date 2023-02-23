@@ -17,4 +17,5 @@ spec:
   lifecycle: experimental
   system: app-customer-onboarding
   owner: onboarding-team
-#  providesApis:
+  providesApis:
+    - api-customer-master
