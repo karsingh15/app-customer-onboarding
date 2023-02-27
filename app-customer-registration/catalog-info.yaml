@@ -17,5 +17,6 @@ spec:
   lifecycle: experimental
   system: app-customer-onboarding
   owner: onboarding-team
+  tags: v0.1.1
   providesApis:
     - api-customer-registration
